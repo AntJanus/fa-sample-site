@@ -1,0 +1,32 @@
+---
+name: blog
+url: /blog
+title: Blog
+posts:
+    - offset
+    - Hello World
+    - Foundation for Apps
+    - Antonin is great
+---
+<h3>{{ vars.title }}</h3>
+
+<a class="button success" href="#" zf-open="subscribeModal">Subscribe!</a>
+<div ng-repeat="post in vars.posts">
+   <h4><a ui-sref="post({ id: $index })">{{ post }}</a></h4>
+</div>
+
+<zf-modal id="subscribeModal" overlay-close="true">
+    <a href="#" zf-close></a>
+   <section class="grid-content">
+       <h3>Ant's Blog</h3>
+       <p>Please subscribe!</p>
+       <form>
+            <label>
+                Enter your email!
+                <input type="text" placeholder="Email">
+            </label>
+            <a href="#" class="button" zf-close>Submit</a>
+        </form>
+    </section>
+</zf-modal>
+

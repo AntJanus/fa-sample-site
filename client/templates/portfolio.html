@@ -1,0 +1,29 @@
+---
+name: portfolio
+url: /portfolio
+title: Portfolio
+works:
+    - My Website
+    - Testsite
+    - superApp
+---
+
+<h3>{{ vars.title }}</h3>
+
+<p>This is the stuff I've worked on!</p>
+
+<div class="grid-block small-up-2 medium-up-3">
+    <div class="grid-content" ng-repeat="work in vars.works">
+        <div class="card">
+            <img src="http://placekitten.com/g/400/200" />
+            <div class="card-divider">
+                {{ work }}
+            </div>
+            <div class="card-section">
+               <p>
+                Pellentesque sed ante imperdiet, sollicitudin libero eget, pharetra velit. Fusce volutpat nisi ut velit tempus, a egestas ligula efficitur. Morbi euismod ipsum vel nisl egestas, at vestibulum justo pretium. Vivamus placerat orci ac faucibus ultrices. Donec lobortis leo vitae est blandit, sed scelerisque diam consectetur.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
